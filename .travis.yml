@@ -55,13 +55,14 @@ script:
   # - gulp
 
 after_success:
-  - cd ./public
-  - git init
+  # - cd ./public
+  # - git init
   - git config user.name "MrDanielWT"
   - git config user.email "daniel_wangt@163.com"
-  - git add .
-  - git commit -m "Update site"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+  - sed -i'' "s/gh_token/${GH_TOKEN}/g" ./_config.yml
+  # - git add .
+  # - git commit -m "Update site"
+  # - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
  # - LAST_BUILD_NUMBER=68
  # - for i in $(seq 1 $LAST_BUILD_NUMBER ); do  travis logs $i --delete --force ; done
 
@@ -71,7 +72,7 @@ deploy:
 
 after_script:
  #- ./_travis.sh
- #- hexo deploy
+ - hexo deploy
 
 # E: Build LifeCycle
 
