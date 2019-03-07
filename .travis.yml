@@ -51,17 +51,16 @@ script:
   - gulp
 
 after_success:
-  - hexo deploy
  # - LAST_BUILD_NUMBER=68
  # - for i in $(seq 1 $LAST_BUILD_NUMBER ); do  travis logs $i --delete --force ; done
 
 deploy:
-  #skip_cleanup: true
-  #keep-history: true
+  skip_cleanup: true
+  keep-history: true
 
 after_script:
  #- ./_travis.sh
-
+ - hexo deploy
 
 # E: Build LifeCycle
 
