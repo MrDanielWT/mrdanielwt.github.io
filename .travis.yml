@@ -1,8 +1,10 @@
 language: node_js
 node_js: stable
 
-sudo: false
-
+#sudo: false
+addons:
+  apt:
+    update: true
 #cache
 cache:
   directories:
@@ -17,40 +19,48 @@ notifications:
 
 before_install:
   - export TZ='Asia/Shanghai' # 设置时区
-  - npm install -g hexo-cli
+  
 
 # S: Build Lifecycle
 install:
   - npm install
   - npm install hexo-generator-searchdb --save
   - npm install hexo-deployer-git --save
+  - npm install -g hexo-cli
 
 before_script:
-  - npm install -g gulp
-  - npm install --save-dev gulp
-  - npm install --save-dev gulp-less
-  - npm install --save-dev gulp-rename
-  - npm install --save-dev gulp-minify-css
-  - npm install --save-dev gulp-autoprefixer
-  - npm install --save-dev gulp-uglify
-  - npm install --save-dev jshint gulp-jshint
-  - npm install --save-dev jshint-stylish
-  - npm install --save-dev gulp-notify
-  - npm install --save-dev gulp-plumber
-  - npm install --save-dev gulp-htmlclean
-  - npm install --save-dev gulp-htmlmin
-  - npm install --save-dev gulp-rev-append
-  - npm install --save-dev gulp-sequence
-  - npm install --save-dev gulp-watch
-  - npm install --save-dev require-dir
-  - chmod +x _travis.sh
-  - sed -i'' "s~git@github.com:MrDanielWT/mrdanielwt.github.io.git~https://${GH_TOKEN}:x-oauth-basic@github.com/MrDanielWT/mrdanielwt.github.io.git~" _config.yml
+  # - npm install -g gulp
+  # - npm install --save-dev gulp
+  # - npm install --save-dev gulp-less
+  # - npm install --save-dev gulp-rename
+  # - npm install --save-dev gulp-minify-css
+  # - npm install --save-dev gulp-autoprefixer
+  # - npm install --save-dev gulp-uglify
+  # - npm install --save-dev jshint gulp-jshint
+  # - npm install --save-dev jshint-stylish
+  # - npm install --save-dev gulp-notify
+  # - npm install --save-dev gulp-plumber
+  # - npm install --save-dev gulp-htmlclean
+  # - npm install --save-dev gulp-htmlmin
+  # - npm install --save-dev gulp-rev-append
+  # - npm install --save-dev gulp-sequence
+  # - npm install --save-dev gulp-watch
+  # - npm install --save-dev require-dir
+  # - chmod +x _travis.sh
+  # - sed -i'' "s~git@github.com:MrDanielWT/mrdanielwt.github.io.git~https://${GH_TOKEN}:x-oauth-basic@github.com/MrDanielWT/mrdanielwt.github.io.git~" _config.yml
 
 script:
   - hexo clean && hexo g
   - gulp
 
 after_success:
+  - cd ./public
+  - git init
+  - git config user.name "MrDanielWT"
+  - git config user.email "daniel_wangt@163.com"
+  - git add .
+  - git commit -m "Update site"
+- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
  # - LAST_BUILD_NUMBER=68
  # - for i in $(seq 1 $LAST_BUILD_NUMBER ); do  travis logs $i --delete --force ; done
 
