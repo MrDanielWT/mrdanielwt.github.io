@@ -60,7 +60,7 @@ deploy:
 
 after_script:
  #- ./_travis.sh
- - hexo deploy
+ #- hexo deploy
 
 # E: Build LifeCycle
 
