@@ -15,31 +15,53 @@ notifications:
     on_success: never
     on_failure: always
 
+before_install:
+  - export TZ='Asia/Shanghai' # 设置时区
+  - npm install -g hexo-cli
+
 # S: Build Lifecycle
 install:
   - npm install
-  - gem install travis
-  - travis login --pro --github-token ${GH_TOKEN}
+  - npm install hexo-generator-searchdb --save
+  - npm install hexo-deployer-git --save
 
 before_script:
-  - export TZ='Asia/Shanghai'
   - npm install -g gulp
+  - npm install --save-dev gulp
+  - npm install --save-dev gulp-less
+  - npm install --save-dev gulp-rename
+  - npm install --save-dev gulp-minify-css
+  - npm install --save-dev gulp-autoprefixer
+  - npm install --save-dev gulp-uglify
+  - npm install --save-dev jshint gulp-jshint
+  - npm install --save-dev jshint-stylish
+  - npm install --save-dev gulp-notify
+  - npm install --save-dev gulp-plumber
+  - npm install --save-dev gulp-htmlclean
+  - npm install --save-dev gulp-htmlmin
+  - npm install --save-dev gulp-rev-append
+  - npm install --save-dev gulp-sequence
+  - npm install --save-dev gulp-watch
+  - npm install --save-dev require-dir
   - chmod +x _travis.sh
+  - sed -i'' "s~git@github.com:MrDanielWT/mrdanielwt.github.io.git~https://${GH_TOKEN}:x-oauth-basic@github.com/MrDanielWT/mrdanielwt.github.io.git~" _config.yml
 
 script:
   - hexo clean && hexo g
   - gulp
 
 after_success:
+  - hexo deploy
  # - LAST_BUILD_NUMBER=68
  # - for i in $(seq 1 $LAST_BUILD_NUMBER ); do  travis logs $i --delete --force ; done
 
 deploy:
-  skip_cleanup: true
-  keep-history: true
+  #skip_cleanup: true
+  #keep-history: true
 
 after_script:
-  - ./_travis.sh
+ #- ./_travis.sh
+
 
 # E: Build LifeCycle
 
@@ -48,5 +70,5 @@ branches:
     - dev
 env:
  global:
-   - GH_REF: github.com:MrDanielWT/mrdanielwt.github.io.git
+   - GH_REF: github.com/MrDanielWT/mrdanielwt.github.io.git
 
