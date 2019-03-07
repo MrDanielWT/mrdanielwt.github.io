@@ -2,9 +2,10 @@ language: node_js
 node_js: stable
 
 #sudo: false
-addons:
+addons: # Travis CI建议加的，自动更新api
   apt:
     update: true
+    
 #cache
 cache:
   directories:
