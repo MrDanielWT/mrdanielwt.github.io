@@ -82,4 +82,6 @@ branches:
 env:
  global:
    - GH_REF: github.com/MrDanielWT/mrdanielwt.github.io.git
+   - CO_REF: git.dev.tencent.com/itnwork/itnwork.git
+   # - GITEE_REF: git@gitee.com/jinribang/blog.git
 

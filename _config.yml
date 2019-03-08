@@ -79,7 +79,8 @@ theme: hexo-theme-snippet
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
  type: git
- repository: git@github.com:MrDanielWT/mrdanielwt.github.io.git
+ repository: 
+    github: git@github.com:MrDanielWT/mrdanielwt.github.io.git
  branch: master
  
  
