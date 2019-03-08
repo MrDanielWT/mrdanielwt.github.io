@@ -25,9 +25,9 @@ before_install:
 # S: Build Lifecycle
 install:
   - npm install
-  - npm install hexo-generator-searchdb --save
-  - npm install hexo-deployer-git --save
-  - npm install -g hexo-cli
+  # - npm install hexo-generator-searchdb --save
+  # - npm install hexo-deployer-git --save
+  # - npm install -g hexo-cli
 
 before_script:
   # - npm install -g gulp
@@ -51,15 +51,15 @@ before_script:
   # - sed -i'' "s~git@github.com:MrDanielWT/mrdanielwt.github.io.git~https://${GH_TOKEN}:x-oauth-basic@github.com/MrDanielWT/mrdanielwt.github.io.git~" _config.yml
 
 script:
-  - hexo clean && hexo g
+  - hexo g
   # - gulp
 
 after_success:
   # - cd ./public
   # - git init
-  - git config user.name "MrDanielWT"
-  - git config user.email "daniel_wangt@163.com"
-  - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
+  # - git config user.name "MrDanielWT"
+  # - git config user.email "daniel_wangt@163.com"
+  # - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
   # - git add .
   # - git commit -m "Update site"
   # - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
@@ -71,8 +71,8 @@ after_success:
 # keep-history: true
 
 after_script:
- #- ./_travis.sh
- - hexo deploy
+  - ./_travis.sh
+ # - hexo deploy
 
 # E: Build LifeCycle
 
