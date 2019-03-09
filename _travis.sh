@@ -54,7 +54,7 @@ EOF
   # Coding
   git push --force --quiet "https://itnwork:${CO_TOKEN}@${CO_REF}" master:master
   # Gitee Pages
-  # git push --force --quiet "https://jinribang:${GH_TOKEN}@${GITEE_REF}" master:master
+  # git push --force --quiet "https://jinribang:${GH_TOKEN}@${GITEE_REF}" master:master a6599bcd662698ef44ae10020c74b191b744e2d84b1245b33bb2ac33584a1ae9
  
 
   # Create Tag
