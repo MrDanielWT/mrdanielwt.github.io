@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>王涛的博客</title>
   
-  
+  <subtitle>wangtao</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://itnwork.com/"/>
-  <updated>2019-03-07T12:41:55.316Z</updated>
-  <id>http://itnwork.com/</id>
+  <link href="https://www.itnwork.com/"/>
+  <updated>2019-03-08T11:19:30.599Z</updated>
+  <id>https://www.itnwork.com/</id>
   
   <author>
     <name>wangtao</name>
@@ -17,13 +17,68 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>second article</title>
-    <link href="http://itnwork.com/2019/03/06/second-article/"/>
-    <id>http://itnwork.com/2019/03/06/second-article/</id>
-    <published>2019-03-06T09:05:57.000Z</published>
-    <updated>2019-03-07T12:41:55.316Z</updated>
+    <title>万网DNS与其他云解析系统比较</title>
+    <link href="https://www.itnwork.com/archives/f21a6563.html"/>
+    <id>https://www.itnwork.com/archives/f21a6563.html</id>
+    <published>2019-03-08T11:18:57.000Z</published>
+    <updated>2019-03-08T11:19:30.599Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><pre><code>这是一个测试</code></pre><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><pre><code>color</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>注册域名以后，您只拥有了这个域名的使用权，但无法通过域名直接访问您的网站，或作为电子邮箱后缀进行邮件收发。原因在于，域名只是为了方便记忆而专门建立的一套地址转换系统，要访问一台互联网上的服务器，必须通过 IP 地址来实现。而域名解析就是将域名指向 IP 地址的过程。“域名解析”是使用域名的必备环节。</p><p>您需要选择优秀的服务商，确保您的域名在解析过程中拥有稳定、快速、安全的服务保障，从而获得最佳的服务器访问体验。</p><h1 id="一、什么是万网云解析？"><a href="#一、什么是万网云解析？" class="headerlink" title="一、什么是万网云解析？"></a>一、什么是万网云解析？</h1><p>万网云解析是万网 DNS 系统面向全网域名升级开放的免费智能域名解析服务，提供稳定、安全、极速的域名解析能力，支持非万网域名海外 IP 解析，且全部功能免费使用。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1、稳定，99.99% 服务可用率。阿里强大的网络基础设施布局，独享多线 BGP 的多机房集群自动宕机迁移，系统性能监测实时报警，让每一次访问使命必达！</span><br><span class="line"></span><br><span class="line">2、安全，拥有淘宝级防护能力。阿里自主研发的超百 G 流量清洗中心，可对攻击行为迅速做出判断跟踪，并按照预案进行处理，确保域名解析服务稳定可靠！</span><br><span class="line"></span><br><span class="line">3、极速，解析实时生效。域名解析记录实时更新，自动判断访问用户来自联通、电信、移动、教育易用，强大功能轻松体验。直观简捷的操作面板与友好的功能提示，人性化解析设置操作零成本上手，随时启动云解析的强大功能！</span><br><span class="line"></span><br><span class="line">4、平滑，解析切换无感知。域名添加成功后，即可预设解析记录，一旦 DNS 更换生效，解析服务平滑切换，访问体验不中断！</span><br></pre></td></tr></table></figure><h1 id="二、万网域名解析的优势"><a href="#二、万网域名解析的优势" class="headerlink" title="二、万网域名解析的优势"></a>二、万网域名解析的优势</h1><p>来自 DailyChange 的权威第三方数据统计显示，万网云解析是国内域名解析市场第一的服务提供商，拥有最多的域名解析保有量。基于万网 19 年的稳定解析服务保障，以及阿里的技术能力与网络基础设施布局，超过 300 万域名用户正在使用万网云解析。</p><p>万网云解析提供了 99.99% 的服务可用率保证，拥有淘宝级的安全防护能力，以及实时解析生效，确保稳定、安全、极速的解析能力；支持高质量的电信、联通、移动、教育网和海外的多线智能解析，获得最流畅的访问体验；全部功能均免费面向所有用户提供。</p><p>新版万网云解析升级发布，开放支持非万网域名以及海外 IP 解析。</p><h1 id="域名注册商提供的免费服务"><a href="#域名注册商提供的免费服务" class="headerlink" title="域名注册商提供的免费服务"></a>域名注册商提供的免费服务</h1><p>Godaddy：不在Godaddy注册域名，也可以使用Godaddy的域名解析服务，使用方法很简单，登录Godaddy网站后，点击“Add Off-site DNS”即可添加用户的域名，之后将用户域名的DNS设置为Godaddy指定的地址，域名DNS生效后，即可点击添加的域名进行DNS解析设置。</p><p>NameCheap：知名的域名注册商NameCheap也和Godaddy一样，提供免费DNS域名解析，点击“FreeDNS”后，即可添加用户域名，用户可以通过修改DNS或域名邮件来验证自己的域名，NameCheap的解析服务支持的功能有：网址转发（可隐藏原URL、支持301重定向）、邮件转发、A记录、CNAME别名记录、MX邮件记录、TXT文本记录、NS记录、AAAA记录（IPV6）、动态域名解析等等。</p><h1 id="国内免费域名解析服务"><a href="#国内免费域名解析服务" class="headerlink" title="国内免费域名解析服务"></a>国内免费域名解析服务</h1><p>DNSPod：DNSPod是国内运营较久的免费DNS解析服务，除了免费服务外，还提供多项收费服务。DNSPod的功能较多，支持电信、网通、教育网双线或者三线智能DNS解析，在中国国内解析速度较快，但对于国外的Google爬虫来说经常出现无法访问的情况。</p><p>DNS.La：也是类似DNSPod的免费DNS解析服务，可以为同时有电信、联通、教育网服务器的网站提供免费智能DNS的解析。</p><p>EDNS：易名中国提供的免费域名解析服务，非易名中国用户也可使用。</p><h1 id="国外免费域名解析服务"><a href="#国外免费域名解析服务" class="headerlink" title="国外免费域名解析服务"></a>国外免费域名解析服务</h1><p>ZoneEdit：美国著名的老牌免费域名DNS解析服务，成立于1999年。免费帐户最多可添加5个域名。解析类型：A记录、AAAA记录、 TXT文本记录、LOC记录、PTR记录、CNAME别名记录、MX邮件记录、网址转发、邮件转发等。界面超级简洁，速度快，稳定。</p><p>HE.NET：是美国老牌IDC，成立于1994年，在技术领域比较强，尤其是IPV6应用。这个免费DNS解析服务最多可以添加50个域名，可以设置A记录、AAAA记录、CNAME别名记录、MX邮件记录、NS记录、TXT记录、SRV记录。</p><p>FreeDNS：一家美国免费域名DNS解析服务网站，界面简洁，注册简单，支持添加任何后缀的域名，支持Google Apps服务。免费域名DNS解析服务有三种模式：简单模式可直接设置IP指向、转发模式可设置301永久重定向和302临时重定向、高级模式可设置A记录、AAAA记录、CNAME记录、MX记录、PTR记录、TXT记录。</p><p>afraid：美国一家免费域名解析服务，运营了相当长的时间了，值得提醒的是按照官方规定六个月账号必须有一次登录，否则账号会被锁定 。</p><h1 id="CDN服务自带域名解析"><a href="#CDN服务自带域名解析" class="headerlink" title="CDN服务自带域名解析"></a>CDN服务自带域名解析</h1><p>CloudFlare：虽然它的主营业务是CDN（Anycast），但丝毫不影响它作为免费DNS的声誉，况且这个免费DNS是真的全球分布（12个节点），且使用了CDN技术。</p><p>百度加速乐：加速乐也主要是CDN业务，顺带提供DNS域名解析，提供抗CC攻击、免费DNS解析、免费分省解析、防黑客攻击、黑链暗链防护、页面篡改防护服务。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;注册域名以后，您只拥有了这个域名的使用权，但无法通过域名直接访问您的网站，或作为电子邮箱后缀进行邮件收发。原因在于，域名只是为了方便记忆而专门建立的一套地址转换系统，要访问一台互联网上的服务器，必须通过 IP 地址来实现。而域名解析就是将域名指向 IP 地址的过程。“域名解
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://www.itnwork.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="DNS" scheme="https://www.itnwork.com/tags/DNS/"/>
+    
+      <category term="云解析" scheme="https://www.itnwork.com/tags/%E4%BA%91%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二月二龙抬头</title>
+    <link href="https://www.itnwork.com/archives/c40fbf14.html"/>
+    <id>https://www.itnwork.com/archives/c40fbf14.html</id>
+    <published>2019-03-08T09:12:12.000Z</published>
+    <updated>2019-03-08T09:12:35.998Z</updated>
+    
+    <content type="html"><![CDATA[<p>18年已经过去两个月了，我翻开笔记本，看着我一年的晨间日记，还有那几个小目标，陷入了沉思。</p><p>很久之前都想对去年做个总结，对今年做下展望，由于惰性，一直拖到现在才来开始做。</p><p>对于19年我的愿望是什么，我一直在问我自己。</p><p>最后通过对过去不断地总结我发现，我19年的最大愿望，就是继续完成18年未完成的愿望。</p><p>回顾2018，做的对的几件大事：</p><pre><code>一直把学习放在第一位；对于错误的方向果断的放下；自修能量改变自己；</code></pre><p>做的错的几件事情：</p><pre><code>低谷的时候不能沉迷，没能站高一线，看待全局；我过去成功的经验，反而成了我上半年道路上的阻碍；当我在抱怨的时候，有大巴人在偷偷赚大钱；</code></pre><p>对待2019，将要做的三件事：</p><pre><code>1、自修能量改变自己2、珍惜身边关心自己的人3、把抖商做起来。</code></pre><p>对于自己能够不断地自修能量改变自己，我最应该感谢李枝慧，一个见证了我的起起落落，一直陪伴在我左右的人，没有她不会有我现在的改变。</p><p>人只有在你没有势能的时候才能看清人的本质，所以，举杯，庆祝人生的低谷，让你可以认清身边很多风景。</p><p>做事是术，做人是道，道是根本！</p><p>学到影响最深刻的几句话是：</p><pre><code>正念厚德，利众利他格局决定高度，心态决定状态，初心决定未来做好自己，做个好人，用真心换真心脚踏实地，不抄近道言而有信，有诺必践</code></pre><p>有一句金句对我感触很大：我们每年要把自己的能力提升30%，收入至少也要提升30%，如果你能力提升了，收入没有提升，那你需要换圈子！</p><p>经营自己的圈子是多么重要，这一点我最佩服蝉老大，做人他第一，没有之一。</p><p>亿万身家还能做好一个小弟，真的太难了。</p><p>我和他距离还有很多段。</p><p>最近在家里闭关，给2019年布局：</p><pre><code>空杯心态不断学习，体系不断完善；自修——八风吹不动，端坐紫金莲；善待生命中出现的每一个人，因为三世修炼才换今生一次回眸；帮助媳妇搭建一个工大流量池；带父母出去旅行一次；多认识10个朋友；保持锻炼；</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;18年已经过去两个月了，我翻开笔记本，看着我一年的晨间日记，还有那几个小目标，陷入了沉思。&lt;/p&gt;
+&lt;p&gt;很久之前都想对去年做个总结，对今年做下展望，由于惰性，一直拖到现在才来开始做。&lt;/p&gt;
+&lt;p&gt;对于19年我的愿望是什么，我一直在问我自己。&lt;/p&gt;
+&lt;p&gt;最后通过对过去
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://www.itnwork.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="规划" scheme="https://www.itnwork.com/tags/%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>second article</title>
+    <link href="https://www.itnwork.com/archives/60080d37.html"/>
+    <id>https://www.itnwork.com/archives/60080d37.html</id>
+    <published>2019-03-06T09:05:57.000Z</published>
+    <updated>2019-03-08T03:22:13.065Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><pre><code>这是一个测试</code></pre><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><pre><code>colordo you know</code></pre>]]></content>
     
     <summary type="html">
     
@@ -35,45 +90,45 @@
     
     </summary>
     
-      <category term="后端" scheme="http://itnwork.com/categories/%E5%90%8E%E7%AB%AF/"/>
+      <category term="后端" scheme="https://www.itnwork.com/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="jQuery" scheme="http://itnwork.com/tags/jQuery/"/>
+      <category term="jQuery" scheme="https://www.itnwork.com/tags/jQuery/"/>
     
-      <category term="表格" scheme="http://itnwork.com/tags/%E8%A1%A8%E6%A0%BC/"/>
+      <category term="表格" scheme="https://www.itnwork.com/tags/%E8%A1%A8%E6%A0%BC/"/>
     
-      <category term="表单验证" scheme="http://itnwork.com/tags/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/"/>
+      <category term="表单验证" scheme="https://www.itnwork.com/tags/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/"/>
     
   </entry>
   
   <entry>
     <title>first article</title>
-    <link href="http://itnwork.com/2019/03/06/first-article/"/>
-    <id>http://itnwork.com/2019/03/06/first-article/</id>
+    <link href="https://www.itnwork.com/archives/64c6e1a6.html"/>
+    <id>https://www.itnwork.com/archives/64c6e1a6.html</id>
     <published>2019-03-06T02:35:49.000Z</published>
-    <updated>2019-03-07T10:01:23.389Z</updated>
+    <updated>2019-03-08T02:58:46.853Z</updated>
     
-    <content type="html"><![CDATA[<p>#标题一<br>this is a test</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><pre><code>This is the bell of victory，i&apos;m happy！</code></pre>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;#标题一&lt;br&gt;this is a test&lt;/p&gt;
-
+        &lt;h1 id=&quot;标题一&quot;&gt;&lt;a href=&quot;#标题一&quot; class=&quot;headerlink&quot; title=&quot;标题一&quot;&gt;&lt;/a&gt;标题一&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;This is the bell of victory，i&amp;apos;m happy！
+&lt;/code&gt;&lt;/pre&gt;
       
     
     </summary>
     
-      <category term="前端" scheme="http://itnwork.com/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://www.itnwork.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
   </entry>
   
   <entry>
     <title>辨析 Sass 中的 Map 和 List</title>
-    <link href="http://itnwork.com/2015/10/21/demo/"/>
-    <id>http://itnwork.com/2015/10/21/demo/</id>
+    <link href="https://www.itnwork.com/archives/e598dc64.html"/>
+    <id>https://www.itnwork.com/archives/e598dc64.html</id>
     <published>2015-10-21T02:34:12.000Z</published>
     <updated>2019-03-06T05:47:14.871Z</updated>
     
@@ -88,7 +143,7 @@
     </summary>
     
     
-      <category term="css" scheme="http://itnwork.com/tags/css/"/>
+      <category term="css" scheme="https://www.itnwork.com/tags/css/"/>
     
   </entry>
   
