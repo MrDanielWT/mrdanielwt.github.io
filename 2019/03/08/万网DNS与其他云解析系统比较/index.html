@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="王涛的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://www.itnwork.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="DNS,云解析">
+
+
+    <meta name="description" content="注册域名以后，您只拥有了这个域名的使用权，但无法通过域名直接访问您的网站，或作为电子邮箱后缀进行邮件收发。原因在于，域名只是为了方便记忆而专门建立的一套地址转换系统，要访问一台互联网上的服务器，...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>万网DNS与其他云解析系统比较 | 王涛的博客</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="王涛的博客" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?//hm.baidu.com/hm.js?ee75cf111111aa99f8540efa2570970";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+	<script>
+		(function(i, s, o, g, r, a, m) {
+		    i['GoogleAnalyticsObject'] = r;
+		    i[r] = i[r] || function() {
+		        (i[r].q = i[r].q || []).push(arguments)
+		    }, i[r].l = 1 * new Date();
+		    a = s.createElement(o),
+		    m = s.getElementsByTagName(o)[0];
+		    a.async = 1;
+		    a.src = g;
+		    m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-80781234-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+
+    
+
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="wangtao">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 财富大家庭 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://www.itnwork.com">王涛的博客</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="万网DNS与其他云解析系统比较">
+            
+	            万网DNS与其他云解析系统比较
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/工具/">工具</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/DNS/">DNS</a> <a class="tag-link" href="/tags/云解析/">云解析</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2019/03/08</span>
+        </span>
+        
+            <span class="fa-wrap">
+                <i class="fa fa-eye"></i>
+                <span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>注册域名以后，您只拥有了这个域名的使用权，但无法通过域名直接访问您的网站，或作为电子邮箱后缀进行邮件收发。原因在于，域名只是为了方便记忆而专门建立的一套地址转换系统，要访问一台互联网上的服务器，必须通过 IP 地址来实现。而域名解析就是将域名指向 IP 地址的过程。“域名解析”是使用域名的必备环节。</p>
+<p>您需要选择优秀的服务商，确保您的域名在解析过程中拥有稳定、快速、安全的服务保障，从而获得最佳的服务器访问体验。</p>
+<h1 id="一、什么是万网云解析？"><a href="#一、什么是万网云解析？" class="headerlink" title="一、什么是万网云解析？"></a>一、什么是万网云解析？</h1><p>万网云解析是万网 DNS 系统面向全网域名升级开放的免费智能域名解析服务，提供稳定、安全、极速的域名解析能力，支持非万网域名海外 IP 解析，且全部功能免费使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1、稳定，99.99% 服务可用率。阿里强大的网络基础设施布局，独享多线 BGP 的多机房集群自动宕机迁移，系统性能监测实时报警，让每一次访问使命必达！</span><br><span class="line"></span><br><span class="line">2、安全，拥有淘宝级防护能力。阿里自主研发的超百 G 流量清洗中心，可对攻击行为迅速做出判断跟踪，并按照预案进行处理，确保域名解析服务稳定可靠！</span><br><span class="line"></span><br><span class="line">3、极速，解析实时生效。域名解析记录实时更新，自动判断访问用户来自联通、电信、移动、教育易用，强大功能轻松体验。直观简捷的操作面板与友好的功能提示，人性化解析设置操作零成本上手，随时启动云解析的强大功能！</span><br><span class="line"></span><br><span class="line">4、平滑，解析切换无感知。域名添加成功后，即可预设解析记录，一旦 DNS 更换生效，解析服务平滑切换，访问体验不中断！</span><br></pre></td></tr></table></figure>
+<h1 id="二、万网域名解析的优势"><a href="#二、万网域名解析的优势" class="headerlink" title="二、万网域名解析的优势"></a>二、万网域名解析的优势</h1><p>来自 DailyChange 的权威第三方数据统计显示，万网云解析是国内域名解析市场第一的服务提供商，拥有最多的域名解析保有量。基于万网 19 年的稳定解析服务保障，以及阿里的技术能力与网络基础设施布局，超过 300 万域名用户正在使用万网云解析。</p>
+<p>万网云解析提供了 99.99% 的服务可用率保证，拥有淘宝级的安全防护能力，以及实时解析生效，确保稳定、安全、极速的解析能力；支持高质量的电信、联通、移动、教育网和海外的多线智能解析，获得最流畅的访问体验；全部功能均免费面向所有用户提供。</p>
+<p>新版万网云解析升级发布，开放支持非万网域名以及海外 IP 解析。</p>
+<h1 id="域名注册商提供的免费服务"><a href="#域名注册商提供的免费服务" class="headerlink" title="域名注册商提供的免费服务"></a>域名注册商提供的免费服务</h1><p>Godaddy：不在Godaddy注册域名，也可以使用Godaddy的域名解析服务，使用方法很简单，登录Godaddy网站后，点击“Add Off-site DNS”即可添加用户的域名，之后将用户域名的DNS设置为Godaddy指定的地址，域名DNS生效后，即可点击添加的域名进行DNS解析设置。</p>
+<p>NameCheap：知名的域名注册商NameCheap也和Godaddy一样，提供免费DNS域名解析，点击“FreeDNS”后，即可添加用户域名，用户可以通过修改DNS或域名邮件来验证自己的域名，NameCheap的解析服务支持的功能有：网址转发（可隐藏原URL、支持301重定向）、邮件转发、A记录、CNAME别名记录、MX邮件记录、TXT文本记录、NS记录、AAAA记录（IPV6）、动态域名解析等等。</p>
+<h1 id="国内免费域名解析服务"><a href="#国内免费域名解析服务" class="headerlink" title="国内免费域名解析服务"></a>国内免费域名解析服务</h1><p>DNSPod：DNSPod是国内运营较久的免费DNS解析服务，除了免费服务外，还提供多项收费服务。DNSPod的功能较多，支持电信、网通、教育网双线或者三线智能DNS解析，在中国国内解析速度较快，但对于国外的Google爬虫来说经常出现无法访问的情况。</p>
+<p>DNS.La：也是类似DNSPod的免费DNS解析服务，可以为同时有电信、联通、教育网服务器的网站提供免费智能DNS的解析。</p>
+<p>EDNS：易名中国提供的免费域名解析服务，非易名中国用户也可使用。</p>
+<h1 id="国外免费域名解析服务"><a href="#国外免费域名解析服务" class="headerlink" title="国外免费域名解析服务"></a>国外免费域名解析服务</h1><p>ZoneEdit：美国著名的老牌免费域名DNS解析服务，成立于1999年。免费帐户最多可添加5个域名。解析类型：A记录、AAAA记录、 TXT文本记录、LOC记录、PTR记录、CNAME别名记录、MX邮件记录、网址转发、邮件转发等。界面超级简洁，速度快，稳定。</p>
+<p>HE.NET：是美国老牌IDC，成立于1994年，在技术领域比较强，尤其是IPV6应用。这个免费DNS解析服务最多可以添加50个域名，可以设置A记录、AAAA记录、CNAME别名记录、MX邮件记录、NS记录、TXT记录、SRV记录。</p>
+<p>FreeDNS：一家美国免费域名DNS解析服务网站，界面简洁，注册简单，支持添加任何后缀的域名，支持Google Apps服务。免费域名DNS解析服务有三种模式：简单模式可直接设置IP指向、转发模式可设置301永久重定向和302临时重定向、高级模式可设置A记录、AAAA记录、CNAME记录、MX记录、PTR记录、TXT记录。</p>
+<p>afraid：美国一家免费域名解析服务，运营了相当长的时间了，值得提醒的是按照官方规定六个月账号必须有一次登录，否则账号会被锁定 。</p>
+<h1 id="CDN服务自带域名解析"><a href="#CDN服务自带域名解析" class="headerlink" title="CDN服务自带域名解析"></a>CDN服务自带域名解析</h1><p>CloudFlare：虽然它的主营业务是CDN（Anycast），但丝毫不影响它作为免费DNS的声誉，况且这个免费DNS是真的全球分布（12个节点），且使用了CDN技术。</p>
+<p>百度加速乐：加速乐也主要是CDN业务，顺带提供DNS域名解析，提供抗CC攻击、免费DNS解析、免费分省解析、防黑客攻击、黑链暗链防护、页面篡改防护服务。</p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2019/03/08/二月二龙抬头/" class="next-post btn btn-default" title="二月二龙抬头">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">二月二龙抬头</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、什么是万网云解析？"><span class="toc-text">一、什么是万网云解析？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、万网域名解析的优势"><span class="toc-text">二、万网域名解析的优势</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#域名注册商提供的免费服务"><span class="toc-text">域名注册商提供的免费服务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#国内免费域名解析服务"><span class="toc-text">国内免费域名解析服务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#国外免费域名解析服务"><span class="toc-text">国外免费域名解析服务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CDN服务自带域名解析"><span class="toc-text">CDN服务自带域名解析</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+        访问量:
+        <strong id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </strong>
+        &nbsp; | &nbsp;
+        访客数:
+        <strong id="busuanzi_value_site_uv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </strong>
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2019
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
