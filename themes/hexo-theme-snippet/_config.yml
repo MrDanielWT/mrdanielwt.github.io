@@ -117,7 +117,7 @@ links:
 # 主题自定义个性化配置
 
 ## 网站宣传语
-branding: 财富大家庭
+branding: 不灌鸡汤，只讲实操。
 
 ## 设置banner背景图片
 banner:
@@ -167,9 +167,9 @@ reward:
 
 ## Valine评论
 valine:
-   enable: true
-   appId: xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz
-   appKey: erIpQac4azoCmgfBB7Dl9maa
+   enable: false
+   appId: VnYpd5yQzH0jssdTF1IcFXR3-gzGzoHsz
+   appKey: WcnBYbX3XO4LaA5LnohoFDEQ
    placeholder: 说点什么吧
    notify: false
    verify: false
@@ -231,10 +231,10 @@ visit_counter:
 cnzz_analytics: 
 
 ### 百度统计
-baidu_analytics: //hm.baidu.com/hm.js?ee75cf111111aa99f8540efa2570970
+baidu_analytics: de875b0b771c7ec8a76599e67f9c2507
 
 ### 谷歌统计
-google_analytics: UA-80781234-1
+google_analytics: UA-135918506-1
 
 ### 腾讯分析
 tencent_analytics:
