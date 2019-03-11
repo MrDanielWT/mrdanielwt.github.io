@@ -51,7 +51,7 @@ before_script:
   # - sed -i'' "s~git@github.com:MrDanielWT/mrdanielwt.github.io.git~https://${GH_TOKEN}:x-oauth-basic@github.com/MrDanielWT/mrdanielwt.github.io.git~" _config.yml
 
 script:
-  - yuque-clean && yuque-hexo sync
+  - yuque-hexo && yuque-hexo sync
   - hexo clean && hexo g
   # - gulp
 
