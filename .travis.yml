@@ -52,7 +52,7 @@ before_script:
 
 script:
   - yuque-hexo sync
-  - hexo clean && hexo g
+  - hexo g
   # - gulp
 
 after_success:
