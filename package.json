@@ -5,6 +5,13 @@
   "hexo": {
     "version": "3.8.0"
   },
+  "yuqueConfig": {
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "shijianlaoshi",
+    "repo": "blog",
+    "mdNameFormat": "title",
+    "postPath": "source/_posts/yuque"
+  },
   "dependencies": {
     "gem": "^2.4.3",
     "gulp-less": "^4.0.1",
@@ -39,6 +46,7 @@
     "gulp-sequence": "^1.0.0",
     "gulp-uglify": "^3.0.2",
     "jshint": "^2.10.1",
-    "jshint-stylish": "^2.2.1"
+    "jshint-stylish": "^2.2.1",
+    "yuque-hexo": "^1.4.2"
   }
 }
