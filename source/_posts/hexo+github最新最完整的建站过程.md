@@ -181,7 +181,7 @@ xxxx为你刚刚注册github账号的名字。
 
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/286890/1552347015283-9a8a60dd-7f6c-4f27-b4dd-3871d2413364.png#align=left&display=inline&height=76&name=image.png&originHeight=95&originWidth=639&size=11345&status=done&width=511)
 
-然后hexo server 启动服务器。
+然后 **hexo server** 启动服务器。
 
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/286890/1552347108693-bbbaf94d-41a4-4201-be5a-cd8ebb1369cf.png#align=left&display=inline&height=76&name=image.png&originHeight=95&originWidth=676&size=10764&status=done&width=541)
 
@@ -218,7 +218,7 @@ repository地址也可以到自己GitHub账户的仓库下复制。
 
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/286890/1552349934196-9e3c5ea9-b9f5-40ba-b87a-01af2988f52f.png#align=left&display=inline&height=524&name=image.png&originHeight=655&originWidth=1018&size=77292&status=done&width=814)
 
-然后安装 部署到github插件的依赖<br /><br /><br />**`npm install hexo-deployer-git --save`**<br /><br />![image.png](https://cdn.nlark.com/yuque/0/2019/png/286890/1552350137456-e839299a-1014-422a-8ba6-721987b0b97c.png#align=left&display=inline&height=196&name=image.png&originHeight=245&originWidth=707&size=36508&status=done&width=566)<br /><br /><br />这个时候就可以开始真正地讲hexo部署到github上了。<br /><br /><br />**hexo deploy**
+然后安装 部署到github插件的依赖<br /><br /><br />**`npm install hexo-deployer-git --save`**<br /><br />![image.png](https://cdn.nlark.com/yuque/0/2019/png/286890/1552350137456-e839299a-1014-422a-8ba6-721987b0b97c.png#align=left&display=inline&height=196&name=image.png&originHeight=245&originWidth=707&size=36508&status=done&width=566)<br /><br /><br />这个时候就可以开始真正地将hexo部署到github上了。<br /><br /><br />**hexo deploy**
 <br /><br /><br />然后就可以在`http://doerteacher.github.io` ，访问你自己的博客了。
 
 
