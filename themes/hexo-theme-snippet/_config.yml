@@ -240,7 +240,7 @@ google_analytics: UA-135918506-1
 tencent_analytics:
 
 ### 百度站点认证
-baidu_site_verification:
+baidu_site_verification: true
 
 ### 百度自动推送
 baidu_push: true
