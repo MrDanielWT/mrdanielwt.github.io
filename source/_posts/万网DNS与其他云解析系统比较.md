@@ -1,7 +1,7 @@
 ---
 title: 万网DNS与其他云解析系统比较
 categories:
-  - 工具
+  - 新媒体
 tags:
   - DNS
   - 云解析

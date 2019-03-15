@@ -1,7 +1,7 @@
 ---
 title: hexo+github最新最完整的建站过程
 categories:
-  - 工具
+  - 技术
 tags:
   - hexo
   - github
