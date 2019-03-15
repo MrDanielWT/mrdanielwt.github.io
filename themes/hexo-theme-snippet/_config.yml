@@ -8,14 +8,20 @@ menu:
 - page: home
   url: /
   icon:
-- page: 前端
-  url: /categories/前端/
+- page: 新媒体
+  url: /categories/新媒体/
   icon:
-- page: 后端
-  url: /categories/后端/
+- page: 文章
+  url: /categories/文章/
   icon:
-- page: 工具
-  url: /categories/工具/
+- page: 技术
+  url: /categories/技术/
+  icon:
+- page: 书籍
+  url: /categories/书籍/
+  icon:
+- page: 咨询
+  url: /categories/咨询/
   icon:
 - page: 时间轴
   url: /archives/
